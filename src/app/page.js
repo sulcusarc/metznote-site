@@ -1,25 +1,28 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 
 export default function SplashPage() {
   const router = useRouter();
+  const [showBubble, setShowBubble] = useState(false);
 
-  const handleEnter = () => {
-    router.push('/intro');
-  };
+  useEffect(() => {
+    const timer = setTimeout(() => setShowBubble(true), 2000);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <div className="relative flex items-center justify-center flex-col min-h-screen w-screen bg-[#332352] overflow-hidden">
-      {/* Grid Background */}
+      {/* Grid */}
       <div className="absolute inset-0 z-0 bg-[linear-gradient(#ffffff10_1px,transparent_1px),linear-gradient(90deg,#ffffff10_1px,transparent_1px)] bg-[size:40px_40px]" />
 
-      {/* Speech Bubble */}
-      <img
-        src="/splash/bubble-btn.svg"
-        alt="Speech Bubble"
-        className="absolute z-10 w-[180px] sm:w-[220px] md:w-[260px] lg:w-[300px] top-[10%] left-[10%] sm:top-[8%] sm:left-[15%] md:top-[10%] md:left-[20%]"
-      />
+      {/* Mobile Speech Bubble */}
+      {showBubble && (
+        <div className="absolute z-10 px-4 py-2 text-xs rounded-xl bg-white text-black shadow-lg top-[12%] left-[10%] sm:hidden animate-fadeIn">
+          “Welcome to MetzNote.”
+        </div>
+      )}
 
       {/* Dr. Metz */}
       <img
@@ -32,7 +35,7 @@ export default function SplashPage() {
       <img
         src="/splash/enter-btn.svg"
         alt="Enter Site Button"
-        onClick={handleEnter}
+        onClick={() => router.push('/intro')}
         className="z-10 mt-6 sm:mt-8 md:mt-10 w-[140px] sm:w-[160px] md:w-[180px] h-auto cursor-pointer hover:opacity-90 hover:scale-[0.97] active:scale-95 transition"
       />
     </div>
