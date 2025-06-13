@@ -14,10 +14,10 @@ export default function SplashPage() {
 
   return (
     <div className="relative min-h-screen w-screen bg-[#332352] overflow-hidden">
-      {/* 🟣 Grid Background */}
+      {/* 🔲 Grid Background */}
       <div className="absolute inset-0 z-0 bg-[linear-gradient(#ffffff10_1px,transparent_1px),linear-gradient(90deg,#ffffff10_1px,transparent_1px)] bg-[size:40px_40px]" />
 
-      {/* 🖥️ Desktop SVG Speech Bubble */}
+      {/* 🖥️ Desktop SVG Speech Bubble (Edit position with top-[X%] and left-[X%]) */}
       <img
         src="/splash/bubble-btn.svg"
         alt="Speech Bubble"
