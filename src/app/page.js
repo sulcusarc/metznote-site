@@ -21,7 +21,7 @@ export default function SplashPage() {
       <img
         src="/splash/bubble-btn.svg"
         alt="Speech Bubble"
-       className="absolute z-30 w-[325px] hidden sm:block top-[49%] left-[31%]"
+       className="absolute z-30 w-[325px] hidden sm:block top-[49%] left-[25%]"
 />
 
       
