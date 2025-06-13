@@ -27,7 +27,7 @@ export default function SplashPage() {
       {/* 📱 Mobile Text Speech Bubble */}
       {showBubble && (
         <div className="absolute z-10 px-4 py-2 text-xs rounded-xl bg-white text-black shadow-lg top-[10%] left-1/2 -translate-x-1/2 sm:hidden animate-fadeIn">
-          “Hi! I'm Dr. Metzenbaum”
+          “Hi! Im Dr. Metzenbaum”
         </div>
       )}
 
