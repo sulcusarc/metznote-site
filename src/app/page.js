@@ -17,22 +17,19 @@ export default function SplashPage() {
       {/* Grid */}
       <div className="absolute inset-0 z-0 bg-[linear-gradient(#ffffff10_1px,transparent_1px),linear-gradient(90deg,#ffffff10_1px,transparent_1px)] bg-[size:40px_40px]" />
 
-      {/* Mobile Speech Bubble */}
-     {/* 🖥️ SVG Bubble for Desktop */}
-<img
-  src="/splash/bubble-btn.svg"
-  alt="Speech Bubble"
-  className="absolute z-10 w-[220px] hidden sm:block top-[10%] left-[10%]"
-/>
+      {/* Desktop SVG Bubble */}
+      <img
+        src="/splash/bubble-btn.svg"
+        alt="Speech Bubble"
+        className="absolute z-10 w-[220px] hidden sm:block top-[10%] left-[10%]"
+      />
 
-{/* 📱 Text Bubble for Mobile */}
-{showBubble && (
-  <div className="absolute z-10 px-4 py-2 text-xs rounded-xl bg-white text-black shadow-lg top-[10%] left-1/2 -translate-x-1/2 sm:hidden animate-fadeIn">
-    “Hi! I'm Dr. Metzenbaum”
-  </div>
-)}
-
-
+      {/* Mobile Text Bubble */}
+      {showBubble && (
+        <div className="absolute z-10 px-4 py-2 text-xs rounded-xl bg-white text-black shadow-lg top-[10%] left-1/2 -translate-x-1/2 sm:hidden animate-fadeIn">
+          “Welcome to MetzNote.”
+        </div>
+      )}
 
       {/* Dr. Metz */}
       <img
