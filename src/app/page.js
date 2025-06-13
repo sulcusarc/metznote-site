@@ -21,8 +21,10 @@ export default function SplashPage() {
       <img
         src="/splash/bubble-btn.svg"
         alt="Speech Bubble"
-        className="absolute z-10 w-[220px] hidden sm:block top-[10%] left-[10%]"
-      />
+       className="absolute z-30 w-[325px] hidden sm:block top-[49%] left-[31%]"
+/>
+
+      
 
       {/* 📱 Mobile Text Speech Bubble */}
       {showBubble && (
